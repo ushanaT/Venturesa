@@ -1,0 +1,154 @@
+body{
+    background-color: rgb(17, 17, 72);
+    padding: 15rem 10% 0px 10%;
+}
+
+nav{
+    box-shadow: 2px 3px 10px rgba(23, 23, 196, 0.7);
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(17, 17, 72);
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    height: 6rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.left{
+    margin-left: 10rem;
+}
+
+.logo1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.logo1 h1{
+    color: rgb(133, 133, 14);
+}
+
+.left .logo1 img{
+    width: 2.1rem;
+}
+
+.right{
+    margin-right: 15rem;
+}
+
+.right ul{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+.right ul li{
+    list-style-type: none;
+}
+
+.right a,
+a{
+    padding: 1rem 1.3rem 1rem 1.3rem;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+
+.right .a1{
+    border: none;
+    color: whitesmoke;
+    transition-duration: .5s;
+}
+
+.right .a1:hover{
+    font-size: 1.8rem;
+}
+
+.right .a2,
+.a2{
+    background-color: rgb(11, 215, 147);
+    border: none;
+    border-radius: 2rem;
+    color: whitesmoke;
+    transition-duration: .6s;
+}
+
+.right .a2:hover,
+.a2:hover{
+    opacity: 0.8;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.intro p{
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: rgb(243, 236, 236);
+}
+
+.sec1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 12rem;    
+}
+
+.sec1 div img{
+    width: 30rem;
+}
+
+@media screen and (max-width:916px){
+    .sec1{
+        grid-template-columns: 1fr;
+    }
+    .left{
+        margin-left: 1rem;
+    }
+    .right{
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (max-width:870px) {
+    .left{
+        margin-left: 2rem;
+    }
+    .a2,
+    .left ul li .a2{
+        padding: .3rem;
+    }
+    
+}
+
+@media screen and (max-width:718px){
+    nav{
+        justify-content: space-between;
+        height: 4rem;
+    }
+
+    body{
+        padding-right:5% ;
+        padding-left: 5%;
+    }
+
+    .right{
+        margin-right: .6rem;
+    }
+    .sec1{
+        gap: 5rem;
+    }
+    .left{
+        margin-left: 1rem;
+    }
+}
+
+
+

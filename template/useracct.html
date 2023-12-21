@@ -1,0 +1,308 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashoboard</title>
+    <link rel="shortcut icon" type="x-icon" href="{% static 'img/bitcoin-3254547-2725172.png'%}">
+    <link href="{% static 'css/user.css' %}" rel="stylesheet">
+</head>
+<body>
+
+      <!--navrbar starts here-->
+
+    <hearder>
+        <nav>
+
+            <div class="out dots">
+                <img src="{% static 'img/xc.png' %}" alt="">
+
+            </div>
+
+            <div class="dots  in dotshow">
+                <img src="{% static 'img/threedot.png' %}" alt="">
+            </div>
+            <div class="logo1">
+
+                <img src="{% static 'img/bitcoin-3254547-2725172.png' %}" alt="">
+                <h1 class="logoimg">
+                    Ventureaibios
+                </h1>
+            </div>
+
+            <div class="dash1">
+                <img src="{% static 'img/menue.png' %}" class="licon" alt="menue-icon">
+                <h2>
+                    Dashoboard
+                </h2>
+            </div>
+
+            <div class="dash2"> 
+                {% if user.is_authenticated %}
+                <p>
+                    <a href="account">#ID-{{user.username}}</a>
+                    </p>{% endif %}
+                <a href="account"><img src="{% static 'img/customer-care.png' %}" class="custmer" alt="customercare-icon"></a>
+            </div>
+        </nav>
+    </hearder>
+
+    <!--navrbar ends here-->
+
+<!--side bar starts here-->
+<div class="sidebar">
+
+    <div class="dash2c ">
+        <a href="#"><img src="{% static 'img/customer-care.png' %}" class="custmer" alt="customercare-icon"></a>
+        <p>{% if user.is_authenticated %}
+            <a href="account">#ID-{{user.username}}</a>
+            {% endif %}</p>
+    </div>
+
+
+    <div class="dash">
+        <a href="user"> <img src="{% static 'img/dash1.png' %}" class="d" alt=""> Dashoboard 
+        </a>
+    </div>
+
+    <div class="dash">
+        <a href="investplans"> <img src="{% static 'img/investi.png' %}" class="d" alt=""> Invest</a>
+    </div>
+
+    <div class="dash">
+        <a href="investp"><img src="{% static 'img/history.png' %}" class="d" alt="">Investment</a>
+    </div>
+
+   
+    <div class="dash">
+        <a href="withdrawal"><img src="{% static 'img/withdraw.png' %}" class="d" alt="">Withdrawal</a>
+    </div>
+
+    <div class="dash">
+        <a href="history"><img src="{% static 'img/history.png' %}" class="d" alt="">History</a>
+    </div>
+    
+
+    <div class="dash">
+        <a href="deposit"><img src="{% static 'img/depo.png' %}" class="d" alt=""> Deposit</a>
+    </div>
+
+
+    <div class="dash">
+        <a href="account"><img class="d" src="{% static 'img/account.png' %}" alt=""> Account</a>
+    </div>
+
+    <div class="dash">
+        <p>
+            <a href="logout">
+                <img src="{% static 'img/logout.png' %}" alt="">Logout
+            </a>
+        </p>
+    </div>
+</div>
+
+
+
+   <section class="currencies">
+<!--account balance section starts here-->
+
+    <div class="ammount">
+        <div class="account-amt">
+            <div class="logo">
+                <h3>
+                    Wallet Balance
+                </h3>
+
+                <img src="" alt="">
+            </div>
+
+            {% if user.is_authenticated %}
+            {% for j in useractive %}
+            {% if user.email == j.email %}
+
+            <div class="second">
+                <p style="color: green;">
+                    ${{j.acctb}}
+                </p>
+                {% endif %}
+                {% endfor %}
+{% endif %}
+                <p>
+                    <a href="deposit">
+                        Add Money
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <div class="earnings">
+            <div class="logo">
+                <h3>
+                    Daily Earnings
+                </h3>
+
+                <img src="#" alt="">
+            </div>
+
+            <div class="seconde">
+                <div class="normalamt">
+                    <p>&dollar;0</p>
+                </div>
+
+                <div class="increment">
+                    <p>Today's Income</p>
+                    <p class="added">&plus;&dollar; 0</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+<!--account balance section ends here-->
+
+<!--other currencies starts here-->
+    <div class="ocurrency">
+
+        <div class="bitcoin">
+            <div class="logo">
+                <h3>
+                    Bitcoin Balance
+                </h3>
+
+                <img src="{% static 'img/bitcoin.png' %}" alt="">
+            </div>
+
+            <div>
+                <p>
+                    $0.00
+                </p>
+            </div>
+        </div>
+
+        <div class="ethereum">
+            <div class="logo">
+                <h3>
+                    Ethereum Balance
+                </h3>
+
+                <img src="{% static 'img/ethereum.png' %}" alt="">
+            </div>
+
+            <div>
+                <p>
+                    $0.00
+                </p>
+            </div>
+        </div>
+
+        <div class="tron">
+            <div class="logo">
+                <h3>
+                    Tron Balance
+                </h3>
+
+                <img src="{% static 'img/tron.png' %}" alt="">
+            </div>
+
+            <div>
+                <p>
+                    $0.00
+                </p>
+            </div>
+        </div>
+
+        <div class="bnb">
+            <div class="logo">
+                <h3>
+                    BNB Balance
+                </h3>
+
+                <img src="{% static 'img/bnb1.svg' %}" alt="">
+            </div>
+
+            <div>
+                <p>
+                    $0.00
+                </p>
+            </div>
+        </div>
+
+        <div class="Litecoin">
+            <div class="logo">
+                <h3>
+                    Litecoin Balance
+                </h3>
+
+                <img src="{% static 'img/litec.svg' %}" alt="">
+            </div>
+
+            <div>
+                <p>
+                    $0.00
+                </p>
+            </div>
+        </div>
+
+        <div class="doge">
+            <div class="logo">
+                <h3>
+                    Doge Balance
+                </h3>
+
+                <img src="{% static 'img/dogec.png' %}" alt="">
+            </div>
+
+            <div>
+                <p>
+                    $0.00
+                </p>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="last">
+        <div class="usdte">
+            <div class="logo">
+                <h3>
+                    UDST TRC20 Balance
+                </h3>
+
+                <img src="{% static 'img/usdte.png' %}" alt="">
+            </div>
+
+            <div>
+                <p>
+                    $0.00
+                </p>
+            </div>
+        </div>
+
+        <div class="usdtt">
+            <div class="logo">
+                <h3>
+                    USDT ERC20 Balance
+                </h3>
+
+                <img src="{% static 'img/trc.svg' %}" alt="">
+            </div>
+            <div>
+                <p>
+                    $0.00
+                </p>
+            </div>
+            
+        </div>
+    </div>
+   </section>
+
+   <!--other currencies ends here-->
+
+   <script src="{% static 'js/scripty.js' %}"></script>
+   <script src="https://unpkg.com/scrollreveal"></script>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EasyPay</title>
+  <link rel="shortcut icon" type="x-icon" href="{% static 'img/easylogo.png'%}">
+  <style>
+    body{
+      padding: 15% 30%;
+    }
+
+    .accountd{
+      background-color: whitesmoke;
+      padding: 10%;
+      border-radius: 2rem;
+      box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .paydetail h2{
+      font-size: 1rem;
+      font-family: georgia;   
+    }
+
+    .accountdet{
+      text-align: center;
+    }
+
+    .accountdet p{
+      font-size: 1.7rem;
+      font-weight: 200;
+      word-wrap: break-word;
+      color: rgb(5, 45, 45);
+    }
+    form{
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+   
+    .instruction{
+      font-size: 1.3rem;
+    }
+    .confirm form label{
+        font-size: 1.4rem;
+        font-weight: 150;
+    }
+    .btc{
+      font-size: 1rem;
+      color: rgb(201, 248, 106);
+    }
+
+    .btn{
+      padding: 2rem 3rem;
+      border: none;
+      border-radius: 3rem;
+      font-size: 1.3rem;
+      color: white;
+      background-color: blue;
+      transition-duration: 0.5s;
+      cursor: pointer;
+    }
+
+    .btn:hover{
+      border: solid 1px blue;
+      color: blue;
+      background-color: whitesmoke;
+    }
+
+    h1{
+      color: blue;
+      font-size: 3rem;
+    }
+
+    img{
+      width:20rem;
+      border-radius: 1rem;
+    }
+
+    .logo{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .logo img{
+      width: 6rem;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="accountd">
+    {% for j in messages %}
+    <p style="color: green;">{{j}}</p>
+    {% endfor %}
+    <div class="logo">
+      <img src="{% static 'img/easylogo.png' %}" alt="">
+      <h1>EasyPay</h1>
+    </div>
+   
+    <div class="container">
+      <div class="paydetail">
+        <h2>
+          payer:{{w.user_requested}}
+        </h2>
+
+        <h2>
+          Requested pay Amount:<span>&dollar; {{w.amount}}</span>
+        </h2>
+
+        <h2>Bitcoin Worlth: <span class="btc">BTC</span> {{w.bitcoin_amount}}</h2>
+      </div>
+<hr>
+      <div class="accountdet">
+        <h1>
+          Payment Address
+        </h1>
+
+        <img src="{% static 'img/barc.jpg' %}" alt="">
+
+        <p>bc1qazag4wf6pz2m538vlm52jpmjrlh3vxrtgc2kjh</p>
+      </div>
+      <p class="instruction">Scan the Code to make payment or copy the Wallet id and make your payment</p>
+<hr>
+
+      <div class="confirm">
+        <form action="easypay" method="POST">
+          {% csrf_token %}
+          <div>
+        <label for="paid">please check the button if you have made the payment</label>
+        <input type="checkbox" value="" name="paid" >
+      </div>
+
+      <div>
+        <button class="btn">
+          Paid
+        </button>
+
+      </div>
+
+      </form>
+      </div>
+    </div>
+  </section>
+  
+</body>
+</html>

@@ -1,0 +1,90 @@
+body{
+    background-color: rgb(17, 17, 72);
+    padding: 10rem 12%;
+}
+
+h1,
+h3,
+p{
+    margin: 0px;
+}
+
+
+
+.container{
+    padding: 2rem 1.5rem;
+    border-radius: 0px 2rem 0px 2rem;
+    box-shadow: 10px 8px 15px rgba(1, 1, 169, 0.8);
+    border: none;
+    transition-duration: .5s;
+    text-align: center;
+    width: 15rem;
+   
+}
+
+.container:hover{
+    border: solid 1px rgb(212, 198, 198);
+  
+}
+h1{
+    color: gray;
+    font-size: 2rem;
+    font-weight: 700;
+
+}
+
+.container div h2{
+    margin-bottom: 1rem;
+    color: gray;
+}
+
+.container div p{
+    font-size: 1.2rem;
+    color: gray;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn{
+    padding: 1rem 2rem;
+    cursor: pointer;
+    background-color: rgb(192, 192, 0);
+    border: none;
+    border-radius: .7rem;
+    color: white;
+}
+
+.percent{
+    color: green;
+    font-size: 1.3rem;
+}
+
+.subplans{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 4rem;
+}
+
+@media  screen and (max-width:1145px) {
+    body{
+        padding: opx;
+    }
+    
+}
+
+@media screen and (max-width:907px){
+    .subplans{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media screen and (max-width:654px){
+    .subplans{
+        grid-template-columns: 1fr;
+    }
+}

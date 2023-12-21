@@ -1,0 +1,92 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="{% static 'css/register.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" type="x-icon" href="{% static 'img/bitcoin-3254547-2725172.png'%}">
+</head>
+<body>
+    <section class="register">
+        <div class="introduction">
+            <h2>
+                Fill the Form Correctly
+            </h2>
+            <hr>
+        </div>
+      
+        <div>
+            <form method="POST" action="register">
+                {% csrf_token %}
+
+                {% for message in messages %}
+
+                {% if message == 'Account created successfully' %}
+                <p style="color: green;">{{message}}</p>
+                {% endif %}
+                <p class="message" style="color: red;">{{message}}</p>
+                {% endfor %}
+                    <div>
+
+                        <label for="fname">First-Name</label>
+                        <input type="text" name="fname" id="fname" class="fname">
+                    </div>
+
+
+                    <div>
+                        <label for="lname">Last-Name</label>
+                        <input type="text" name="lname" id="lname" class="lname">
+                    </div>
+
+
+
+                    <div>
+                        <label for="uname">Username</label>
+                        <input type="text" name="uname" id="uname" class="uname">
+                    </div>
+
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" class="email">
+                    </div>
+
+
+                    <div>
+                        <label for="passwd1">Enter-Pasword</label>
+                        <input type="password" name="passwd1" id="passwd1" class="passwd1">
+                    </div>
+
+
+                    <div>
+                        <label for="passwd2">Confirm-Password</label>
+                        <input type="password" name="passwd2" id="passwd2" class="passwd2">
+                    </div>
+
+                
+
+                    <div class="outer5">
+                        <p>Already have an Account? <a href="login">Login</a></p>
+                    </div>
+
+                    <div class="submt">
+                        <button class="btn">
+                            Register
+                        </button>
+                    </div>
+            
+
+                    
+
+
+              
+
+
+            </form>
+        </div>
+    </section>
+    
+</body>
+</html>

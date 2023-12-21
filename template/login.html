@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN-ACCOUNT</title>
+    <link href="{% static 'css/log.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" type="x-icon" href="{% static 'img/bitcoin-3254547-2725172.png'%}">
+</head>
+<body>
+    <section class="bb">
+        <div>
+            <a href="/">
+                Home
+            </a>
+        </div>
+    </section>
+    <section class="forml">
+        <div class="intro">
+                <h2>Login Here</h2>
+            </div>
+
+        <div class="form-section">
+
+            <form action="login" method="POST">
+                {% csrf_token %}
+
+                {% for message in messages %}
+
+                
+                <p class="message" style="color: red;">{{message}}</p>
+                {% endfor %}
+
+                <div>
+                    <label for="usern">Username</label>
+                    <input type="text" placeholder="Username" class="usern" name="usern">
+                </div>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="eample@email.com" class="email" name="email">
+                </div>
+
+                <div>
+                    <label for="passwd1">Username</label>
+                    <input type="password" placeholder="Password" class="passwd1" name="passwd1">
+                </div>
+
+                <div>
+                    <p>Don't have an account?<a href="register" class="spa1">Create Now!</a></p>
+                </div>
+
+                <div>
+                <a href="useracct.html">
+                    <input type="submit"  class="btn" value="Login">
+                </a>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

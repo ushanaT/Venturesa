@@ -1,0 +1,244 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdraw</title>
+    <link href="{% static 'css/withd.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" type="x-icon" href="{% static 'img/bitcoin-3254547-2725172.png'%}">
+    <link href="{% static 'css/user.css' %}" rel="stylesheet">
+</head>
+<body>
+
+
+        <!--navrbar starts here-->
+
+        <hearder>
+            <nav>
+    
+                <div class="out dots">
+                    <img src="{% static 'img/xc.png' %}" alt="">
+    
+                </div>
+    
+                <div class="dots  in dotshow">
+                    <img src="{% static 'img/threedot.png' %}" alt="">
+                </div>
+    
+                <div class="logo1">
+                    <img src="{% static 'img/bitcoin-3254547-2725172.png' %}" alt="">
+                    <h1 class="logoimg">
+                        Ventureaibios
+                    </h1>
+                </div>
+    
+                <div class="dash1">
+                    <img src="{% static 'img/menue.png' %}" class="licon" alt="">
+                    <h2>
+                        Withdrawal
+                    </h2>
+                </div>
+    
+                <div class="dash2">
+                    <p>{% if user.is_authenticated %}
+                        <a href="account">#ID-{{user.username}}</a>
+                        {% endif %}</p>
+                    <img src="{% static 'img/customer-care.png' %}" class="custmer" alt="">
+                </div>
+            </nav>
+        </hearder>
+    
+        <!--navrbar ends here-->
+    
+    <!--side bar starts here-->
+    <div class="sidebar">
+    
+        <div class="dash2c ">
+            <a href="#"><img src="{% static 'img/customer-care.png' %}" class="custmer" alt="customercare-icon"></a>
+    
+            <p>{% if user.is_authenticated %}
+                <a href="account">#ID-{{user.username}}</a>
+                {% endif %}</p>
+        </div>
+    
+    
+        <div class="dash">
+            <a href="user"> <img src="{% static 'img/dash1.png' %}" class="d" alt=""> Dashoboard 
+            </a>
+        </div>
+    
+        <div class="dash">
+            <a href="investplans"> <img src="{% static 'img/investi.png' %}" class="d" alt=""> Invest</a>
+        </div>
+    
+        <div class="dash">
+            <a href="investp"><img src="{% static 'img/history.png' %}" class="d" alt="">Investment</a>
+        </div>
+    
+       
+        <div class="dash">
+            <a href="withdrawal"><img src="{% static 'img/withdraw.png' %}" class="d" alt="">Withdrawal</a>
+        </div>
+    
+        <div class="dash">
+            <a href="history"><img src="{% static 'img/history.png' %}" class="d" alt="">History</a>
+        </div>
+        
+    
+        <div class="dash">
+            <a href="deposit"><img src="{% static 'img/depo.png' %}" class="d" alt=""> Deposit</a>
+        </div>
+    
+        <div class="dash">
+            <a href="account"><img class="d" src="{% static 'img/account.png' %}" alt=""> Account</a>
+        </div>
+    
+        <div class="dash">
+            <p>
+                <a href="logout">
+                    <img src="{% static 'img/logout.png' %}" alt="">Logout
+                </a>
+            </p>
+        </div>
+    </div>
+
+
+
+    <section class="withdrw">
+        <!--account balance section starts here-->
+
+    <div class="ammount">
+        <div class="account-amt">
+            <div class="logo">
+                <h3>
+                    Wallet Balance
+                </h3>
+
+               
+            </div>
+            {% if user.is_authenticated %}
+            {% for w in useractive %}
+            {% if user.email == w.email %}
+            <div class="second">
+                <p style="color: green;">
+                    ${{w.acctb}}
+                </p>
+                {% endif %}
+                {% endfor %}
+{% endif %}
+                <p>
+                    <a href="deposit">
+                        Add Money
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <div class="earnings">
+            <div class="logo">
+                <h3>
+                    Daily Earnings
+                </h3>
+
+                <img src="#" alt="">
+            </div>
+
+            <div class="seconde">
+                <div class="normalamt">
+                    <p>&dollar;0</p>
+                </div>
+
+                <div class="increment">
+                    <p>Today's Income</p>
+                    <p class="added">&plus;&dollar; 0</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+<!--account balance section ends here-->
+
+    </section>
+
+    <section class="fomrpart">
+        <div>
+            <h1>
+                Make Withdrawal
+            </h1>
+        </div>
+        {% for j in messages %}
+        {% if j == 'request submited you will be credited in 12 hours' %}
+        <h2 style="color: green;">{{j}}</h2>
+        {% else %}
+        <h2 style="color:rgb(116, 203, 116);">{{j}}</h2>
+        {% endif %}
+        {% endfor %}
+     {% if user.is_authenticated %}
+     
+        <div class="formw">
+            <form action="withdrawal" method="post">
+                {% csrf_token %}
+                <div>
+                    <label for="amt" >Amount</label>
+                    <input type="number" placeholder="Ammount eg-2384" id="amt" class="amt" name="amt">
+                </div>
+
+                <div>
+                    <label for="curent">Select Bank</label>
+                    <select name="curent" id="curent" class="curent">
+                      
+                        <option>
+                         Paypalm
+                        </option>
+
+                        <option>
+                            Palmpay
+                        </option>
+
+                        <option>
+                            Binance 
+                        </option>
+
+                        <option>
+                          Trust Wallet
+                        </option>
+
+                        <option>
+                            Coinbase
+                        </option>
+
+                       
+                    </select>
+                </div>
+                <div style="display: none;">
+                          <input type="text" value={{user.username}} name="usname">
+                </div>
+
+                <div>
+                    <label for="wadd">User Email</label>
+                    <input type="text" placeholder="your Email"  id="wadd" class="wadd" name="umail">
+                </div>
+
+                <div>
+                    <label for="waddres">Wallet Address</label>
+                    <input type="text" placeholder="Wallet Address" id="waddres" class="waddres" name="waddres">
+                </div>
+
+                <div>
+                    <button class="btn">
+                        Withdraw
+                    </button>
+                </div>
+
+            </form>
+            {% endif %}
+        </div>
+    </section>
+
+    <script src="{% static 'js/scripty.js' %}"></script>
+</body>
+</html>

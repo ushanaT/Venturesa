@@ -1,0 +1,115 @@
+.referal-det{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:end;
+}
+
+.refing{
+    display: flex;
+    flex-direction: column;
+    row-gap: 6rem;
+}
+
+.refing div{
+    display: flex;
+    flex-direction: column;
+}
+
+.refing div input{
+    width: 150px;
+    padding: 1rem 2rem;
+    color: gray;
+    background-color: rgb(0, 0, 35);
+    border: none;
+    border-radius: 5px;
+}
+
+.refing div label{
+    color: gray;
+    font-size: 1rem;
+    font-weight: 200;
+    padding-left: .6rem;
+    padding-bottom: .4rem;
+}
+
+h2{
+    color: white;
+}
+
+.fom2{
+    border: solid 1px gray;
+    padding: 1.2rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.fom2 div{
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+.fom2 div input{
+    width: 22rem;
+    height: 2.7rem;
+    border: none;
+    border-radius: .5rem;
+    padding: .5rem 2rem;
+    font-size: 1rem;
+    font-weight: 200;
+    color: gray;
+    background-color: rgb(0, 0, 35);
+}
+
+.fom2 div .btnw{
+    color: white;
+    width: 25.7rem;
+    background-color: blue;
+    cursor: pointer;
+}
+
+.fom2 div label{
+    color: gray;
+    font-size: 1rem;
+    font-weight: 200;
+    padding-left:1rem ;
+}
+.design{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.referal-intro{
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width:836px){
+    .referal-det{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+}
+
+
+@media screen and (max-width:555px){
+    .fom2{
+        border: none;
+        padding: 0px;
+    }
+
+    body{
+        padding: 5rem 0px;
+    }
+
+    .fom2 div input{
+        width: 19rem;
+    }
+
+    .fom2 div .btnw{
+        width: 23rem;
+    }
+}

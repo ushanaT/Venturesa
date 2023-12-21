@@ -1,0 +1,148 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HISTORY</title>
+    <link href="{% static 'css/history.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" type="x-icon" href="{% static 'img/bitcoin-3254547-2725172.png'%}">
+    <link href="{% static 'css/user.css' %}" rel="stylesheet">
+</head>
+<body>
+
+
+    <!--navrbar starts here-->
+
+    <hearder>
+        <nav>
+
+            <div class="out dots">
+                <img src="{% static 'img/xc.png' %}" alt="">
+
+            </div>
+
+            <div class="dots  in dotshow">
+                <img src="{% static 'img/threedot.png' %}" alt="">
+            </div>
+
+            <div class="logo1">
+                <img src="{% static 'img/bitcoin-3254547-2725172.png' %}" alt="">
+                <h1 class="logoimg">
+                    Ventureaibios
+                </h1>
+            </div>
+
+            <div class="dash1">
+                <img src="{% static 'img/menue.png' %}" class="licon" alt="">
+                <h2>
+                   PLAN HISTORY
+                </h2>
+            </div>
+
+            <div class="dash2">
+
+                <p>{% if user.is_authenticated %}
+                    <a href="account">#ID-{{user.username}}</a>
+                    {% endif %}</p>
+                
+                <img src="{% static 'img/customer-care.png' %}" class="custmer" alt="">
+            </div>
+        </nav>
+    </hearder>
+
+    <!--navrbar ends here-->
+
+<!--side bar starts here-->
+<div class="sidebar">
+
+    <div class="dash2c ">
+        <a href="#"><img src="{% static 'img/customer-care.png' %}" class="custmer" alt="customercare-icon"></a>
+        <p>{% if user.is_authenticated %}
+            <a href="account">#ID-{{user.username}}</a>
+            {% endif %}</p>
+       </div>
+
+
+    <div class="dash">
+        <a href="user"> <img src="{% static 'img/dash1.png' %}" class="d" alt=""> Dashoboard 
+        </a>
+    </div>
+
+    <div class="dash">
+        <a href="investplans"> <img src="{% static 'img/investi.png' %}" class="d" alt=""> Invest</a>
+    </div>
+
+    <div class="dash">
+        <a href="investp"><img src="{% static 'img/history.png' %}" class="d" alt="">Investment</a>
+    </div>
+
+   
+    <div class="dash">
+        <a href="withdrawal"><img src="{% static 'img/withdraw.png' %}" class="d" alt="">Withdrawal</a>
+    </div>
+
+    <div class="dash">
+        <a href="history"><img src="{% static 'img/history.png' %}" class="d" alt="">History</a>
+    </div>
+    
+
+    <div class="dash">
+        <a href="deposit"><img src="{% static 'img/depo.png' %}" class="d" alt=""> Deposit</a>
+    </div>
+
+
+    <div class="dash">
+        <a href="account"><img class="d" src="{% static 'img/account.png' %}" alt=""> Account</a>
+    </div>
+
+    <div class="dash">
+        <p>
+            <a href="logout">
+                <img src="{% static 'img/logout.png' %}" alt="">Logout
+            </a>
+        </p>
+    </div>
+</div>
+
+
+    <section class="his-nav">
+       <table>
+        <thead>
+            <tr>
+                <th>  USER_REQUESTED</th>
+                <th>ACCOUNT_NUMBER</th>
+                <th>AMOUNT</th>
+                <th>STATUS</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for i in logeduserh %}
+            <tr>
+            <td>
+               {{i.user_requested}}
+            </td>
+
+            <td>{{i.accountnumber}}</td>
+
+            <td>${{i.amount}}</td>
+
+            <td style="color: green;">{{i.status}}</td>
+        </tr>
+            {% endfor %}
+
+        </tbody>
+       </table>
+
+        </div>
+
+
+    </section>
+   
+     <!--daily earning history section starts here -->
+
+     <script src="{% static 'js/scripty.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,464 @@
+body{
+   background-color: rgb(17, 17, 72);
+   padding-left: 27%;
+   padding-top: 10rem;
+   padding-right: 10%;
+   
+}
+
+/*top-navigation design starts here*/
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    background-color: rgb(17, 17, 72);
+    column-gap: 2rem;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    height: 6rem;
+    z-index: 0;
+    box-shadow: 2px 1px 10px rgba(4, 4, 27, 0.4);
+}
+
+
+
+.dots img{
+    width: 2.1rem;
+}
+
+.dots,
+.dots1{
+    padding-left: 1.5rem;
+    display: none;
+}
+.logo1{
+    margin-left: 2rem;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .1rem;
+}
+
+.logo1 img{
+    width: 45px;
+}
+
+.logoimg{
+    font-size: .8rem;
+    font-family: cursive;
+    color: rgb(124, 124, 2);
+}
+
+.dash1{
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dash1 h2{
+    color: rgb(3, 73, 116);
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: Georgia;
+}
+
+.dash2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+.dash2 p a{
+    text-decoration: none;
+}
+.dash2 .custmer{
+    width: 4rem;
+    background-color: rgba(253, 248, 248, 0.4);
+    border-radius: 4rem;
+    margin-right: 5rem;
+}
+
+.dash1 .licon{
+    display: none;
+}
+
+
+
+/*top-navigation designs ends here*/
+
+.ammount{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+    transition: border .5s;
+    cursor: pointer;
+}
+
+
+p ,
+h3{
+    color: white;
+    margin: 0px;
+    font-size: 1.4rem;
+
+}
+
+.account-amt:hover,
+.earnings:hover{
+   border: solid 1px gray;
+}
+
+.account-amt{
+    padding: 1.3rem;
+    background-color: rgba(0, 112, 0, 0.3);
+    border-radius: 1rem;
+    border-top: solid 3px green;
+    box-shadow: 5px 5px 10px rgb(0, 0, 125);
+}
+
+.second{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.second a{
+    color: whitesmoke;
+    font-size: 1rem;
+}
+
+.earnings{
+    padding: 1.3rem;
+    border-radius: 1rem;
+    background-color: rgba(17, 17, 80, 0.3);
+    transition: border .5s;
+    cursor: pointer;
+    border-top: solid 3px green;
+    box-shadow: 5px 5px 10px rgb(0, 0, 125);
+}
+
+.earnings .seconde{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.increment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.increment .added{
+    color: green;
+}
+
+
+/*other currrency starts here*/
+
+.ocurrency{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+
+}
+
+.bitcoin,
+.ethereum,
+.tron,
+.bnb,
+.doge,
+.Litecoin,
+.doge,
+.usdte,
+.usdtt{
+    padding: 1.3rem;
+    border-radius: 1rem;
+   transition: border .6s;
+   cursor: pointer;
+}
+
+
+.bitcoin:hover,
+.ethereum:hover,
+.tron:hover,
+.bnb:hover,
+.doge:hover,
+.Litecoin:hover,
+.doge:hover,
+.usdte:hover,
+.usdtt:hover{
+    border: solid 1px gray;
+}
+
+.bitcoin .logo,
+.ethereum .logo,
+.tron .logo,
+.bnb .logo,
+.doge .logo,
+.Litecoin .logo,
+.usdte .logo,
+.usdtt .logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tron{
+    background-color: rgb(150, 0, 0);
+
+}
+
+.ethereum{
+    background-color: rgb(0, 0, 176);
+}
+
+.bnb{
+    background-color: rgb(94, 94, 1);
+}
+
+.Litecoin{
+    background-color: rgb(50, 0, 0);
+}
+
+.bitcoin{
+    background-color: green;
+}
+
+.doge{
+    background-color: rgb(98, 64, 130);
+}
+
+.usdte{
+    background-color: rgb(59, 8, 8);
+}
+
+.usdtt{
+    background-color: rgb(62, 205, 157);
+}
+
+
+
+.last{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+/*side bar starts here*/
+
+
+.sidebar{
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    top: 6rem;
+    background-color: rgb(17, 17, 72);
+    border-right: solid 1px gray;
+    width: 14rem;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    column-gap: 2rem;
+
+}
+.dash2c{
+    display: none;
+}
+
+.sidebar span{
+    color: whitesmoke;
+}
+.sidebar .dash a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+    color: whitesmoke;
+    font-family: 'Courier New';
+    font-size: 1.1rem;
+    padding: 1rem 1rem 1rem 3rem;
+    transition-duration: .6s;
+} 
+
+.sidebar .dash a:hover{
+    opacity: .5;
+    background-color: rgb(6, 6, 58);
+}
+
+.sidebar .dash{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar .dash img{
+    width: 30px;
+    margin-right: .5rem;
+}
+
+.herobtn{
+    font-size: .1rem;
+}
+
+
+/*medial queries for responsive design starts here*/
+
+@media screen and (max-width:1245px){
+    .sidebar div a img{
+        margin-left: 0px;
+    }
+}
+
+
+@media screen and (max-width:718px){
+
+    body{
+       padding: 0px;
+       padding-top: 8rem;
+    }
+
+    .sidebar{
+        display: none;
+    }
+
+    .ammount{
+        row-gap: 2.1rem;
+        grid-template-columns: 1fr;
+    }
+
+    hr{
+        margin-bottom: 1rem;
+    }
+
+    .ocurrency{
+        grid-template-columns: 1fr;
+    }
+
+    .last{
+        grid-template-columns: 1fr;
+    }
+
+
+    nav{
+        justify-content: flex-start;
+        height: 4rem;
+    }
+
+    .dash1{
+        margin-left: .2rem;
+    }
+
+    .dash1 h2{
+        font-size: .9rem;
+    }
+
+    .logo1{
+        margin-left: 1.2rem;
+    }
+
+}
+
+
+
+
+@media screen and (max-width:446px) {
+
+    .dash1{
+        display: none;
+    }
+    
+}
+
+
+@media screen and (max-width:1145px){
+    .dash2{
+        display: none;
+    }
+
+
+    .dash2c{
+        display: block;
+    }
+
+    .sidebar{
+       top: 4.3rem;
+       border-right: none; 
+       display: none;      
+    }
+
+    .sidebar div .d{
+        display: none;
+    }
+
+    .sidebar a{
+        padding: 1.3rem .7rem .7rem 1.1rem;
+        font-size: 1rem;
+    }
+
+    body{
+        padding: 6rem 3rem 1rem 3rem ;
+    }
+
+    nav{
+        height: 4.4rem;
+        justify-content: flex-start;
+    }
+
+    .dash1{
+        margin-left: 1rem;
+    }
+
+    .show{
+        display: block;
+    }
+
+    .dotshow{
+        display: inline-block;  
+        cursor: pointer;     
+    }
+
+    .dash2c{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dash2c a{
+        text-decoration: none;
+        color: gray;
+        font-size: 1rem;
+        font-weight: 200;
+    }
+
+    .dash2c img{
+        width: 40px;
+        border-radius: 2rem;
+        display: block;
+    }
+    
+    .dash2c p{
+        color: gray;
+        font-size: 2rem;
+        font-weight: 200;
+    
+    }
+
+   
+}

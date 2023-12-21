@@ -1,0 +1,440 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HISTORY</title>
+    <link href="{% static 'css/history.css' %}" rel="stylesheet">
+    <link href="{% static 'css/user.css' %}" rel="stylesheet">
+</head>
+<body>
+
+   
+
+    <!--navrbar starts here-->
+
+    <hearder>
+        <nav>
+
+            <div class="out dots">
+                <img src="{% static 'img/xc.png' %}" alt="">
+
+            </div>
+
+            <div class="dots  in dotshow">
+                <img src="{% static 'img/threedot.png' %}" alt="">
+            </div>
+
+            <div class="logo1">
+                <img src="{% static 'img/bitcoin-3254547-2725172.png' %}" alt="">
+                <h1 class="logoimg">
+                    Ventureaibios
+                </h1>
+            </div>
+
+            <div class="dash1">
+                <img src="{% static 'img/menue.png' %}" class="licon" alt="">
+                <h2>
+                   History
+                </h2>
+            </div>
+
+            <div class="dash2">
+                {% if user.is_authenticated %}
+                <a href="#">#ID-{{user.username}}</a>
+                {% endif %}
+                <img src="{% static 'img/customer-care.png' %}" class="custmer" alt="">
+            </div>
+        </nav>
+    </hearder>
+
+    <!--navrbar ends here-->
+
+<!--side bar starts here-->
+<div class="sidebar">
+
+    <div class="dash2c ">
+        <a href="#"><img src="{% static 'img/customer-care.png' %}" class="custmer" alt="customercare-icon"></a>
+        <p>{% if user.is_authenticated %}
+            <a href="#">#ID-{{user.username}}</a>
+            {% endif %}</p>
+    </div>
+
+
+    <div class="dash">
+        <a href="user"> <img src="{% static 'img/dash1.png' %}" class="d" alt=""> Dashoboard 
+        </a>
+    </div>
+
+    <div class="dash">
+        <a href="investplans"> <img src="{% static 'img/investi.png' %}" class="d" alt=""> Invest</a>
+    </div>
+
+    <div class="dash">
+        <a href="#"><img src="{% static 'img/history.png' %}" class="d" alt="">Investment</a>
+    </div>
+
+   
+    <div class="dash">
+        <a href="withdrawal"><img src="{% static 'img/withdraw.png' %}" class="d" alt="">Withdrawal</a>
+    </div>
+
+    <div class="dash">
+        <a href="history"><img src="{% static 'img/history.png' %}" class="d" alt="">History</a>
+    </div>
+    
+
+    <div class="dash">
+        <a href="deposit"><img src="{% static 'img/depo.png' %}" class="d" alt=""> Deposit</a>
+    </div>
+
+
+    <div class="dash">
+        <a href="referal"><img src="{% static 'img/referral.png' %}" class="d" alt=""> Referals</a>
+    </div>
+
+    <div class="dash">
+        <a href="account"><img class="d" src="{% static 'img/account.png' %}" alt=""> Account</a>
+    </div>
+
+    <div class="dash">
+        <p>
+            <a href="logout">
+                <img src="{% static 'img/logout.png' %}" alt="">Logout
+            </a>
+        </p>
+    </div>
+</div>
+
+
+
+    <section class="his-nav">
+        <div class="navv">
+            <din class="de">
+                <a href="history">
+                    DAILY EARNINGS
+                </a>
+            </din>
+
+            <div class="witdrw">
+                <a href="widthdrawhistory">
+                    WITHDRAWAL HISTORY
+                </a>
+            </div>
+
+            <div class="deposite-h">
+                <a href="depositeh">
+                    DEPOSIT HISTORY
+                </a>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <!--daily earning history section starts here -->
+    <section class="dearning" id="dearning">
+        <div class="de-table">
+            <table class="daily-table">
+                <thead>
+                    <tr class="theading">
+        
+                        <th>
+                            WITHDRAWAL DATE
+                        </th>
+
+                        <th>
+                            ACCOUNT NO
+                        </th>
+
+                        <th>
+                            ACCOUNT NAME
+                        </th>
+
+                        <TH>
+                            BANK
+                        </TH>
+
+                        <th>
+                            AMMOUNT
+                        </th>
+
+
+                        <th>
+                            CURRENCY TYPE
+                        </th>
+
+                        <th>
+                            STATUS
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+
+                        <td>
+                            19/12/2023
+                        </td>
+
+                        <td>
+                            21367679086356-678
+                        </td>
+
+                        <td>
+                            Morle Josh
+                        </td>
+
+                        <td>
+                            Binance Wallet
+                        </td>
+
+                        <td>
+                            <span>&dollar;1265.67</span>
+                        </td>
+
+                        <td>
+                            Bitcoin
+                        </td>
+
+                        <td >
+                            <span class="stats"> Successfully</span>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            19/12/2023
+                        </td>
+
+                        <td>
+                            21367679086356-678
+                        </td>
+
+                        <td>
+                            Morle Josh
+                        </td>
+
+                        <td>
+                            Binance Wallet
+                        </td>
+
+                        <td>
+                            <span>&dollar;1265.67</span>
+                        </td>
+
+                        <td>
+                            Bitcoin
+                        </td>
+
+                        <td >
+                            <span class="stats"> Successfully</span>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            19/12/2023
+                        </td>
+
+                        <td>
+                            21367679086356-678
+                        </td>
+
+                        <td>
+                            Morle Josh
+                        </td>
+
+                        <td>
+                            Binance Wallet
+                        </td>
+
+                        <td>
+                            <span>&dollar;1265.67</span>
+                        </td>
+
+                        <td>
+                            Bitcoin
+                        </td>
+
+                        <td >
+                            <span class="stats"> Successfully</span>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            19/12/2023
+                        </td>
+
+                        <td>
+                            21367679086356-678
+                        </td>
+
+                        <td>
+                            Morle Josh
+                        </td>
+
+                        <td>
+                            Binance Wallet
+                        </td>
+
+                        <td>
+                            <span>&dollar;1265.67</span>
+                        </td>
+
+                        <td>
+                            Bitcoin
+                        </td>
+
+                        <td >
+                            <span class="stats"> Successfully</span>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            19/12/2023
+                        </td>
+
+                        <td>
+                            21367679086356-678
+                        </td>
+
+                        <td>
+                            Morle Josh
+                        </td>
+
+                        <td>
+                            Binance Wallet
+                        </td>
+
+                        <td>
+                            <span>&dollar;1265.67</span>
+                        </td>
+
+                        <td>
+                            Bitcoin
+                        </td>
+
+                        <td >
+                            <span class="stats"> Successfully</span>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            19/12/2023
+                        </td>
+
+                        <td>
+                            21367679086356-678
+                        </td>
+
+                        <td>
+                            Morle Josh
+                        </td>
+
+                        <td>
+                            Binance Wallet
+                        </td>
+
+                        <td>
+                            <span>&dollar;1265.67</span>
+                        </td>
+
+                        <td>
+                            Bitcoin
+                        </td>
+
+                        <td >
+                            <span class="stats"> Successfully</span>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            19/12/2023
+                        </td>
+
+                        <td>
+                            21367679086356-678
+                        </td>
+
+                        <td>
+                            Morle Josh
+                        </td>
+
+                        <td>
+                            Binance Wallet
+                        </td>
+
+                        <td>
+                            <span>&dollar;1265.67</span>
+                        </td>
+
+                        <td>
+                            Bitcoin
+                        </td>
+
+                        <td >
+                            <span class="stats"> Successfully</span>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            19/12/2023
+                        </td>
+
+                        <td>
+                            21367679086356-678
+                        </td>
+
+                        <td>
+                            Wiliams Hawkins
+                        </td>
+
+                        <td>
+                            Binance Wallet
+                        </td>
+
+                        <td>
+                            <span>&dollar;1265.67</span>
+                        </td>
+
+                        <td>
+                            Palmpay
+                        </td>
+
+                        <td >
+                            <span class="stats"> Successfully</span>
+                        </td>
+                    </tr>
+
+                   
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <script src="{% static 'js/scripty.js'%}"></script>
+    </body>
+    </html>

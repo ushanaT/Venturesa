@@ -1,0 +1,73 @@
+
+
+.navv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    height: 6rem;
+}
+
+.navv a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-family:Impact;
+}
+
+.de{
+    margin-left: 8rem;
+}
+
+.deposite-h{
+    margin-right: 8rem;
+}
+
+.dearning{
+    padding: 2rem 10%;
+}
+
+
+.daily-table, 
+.wh-table,
+.wh-table td,
+td,
+.wh-table td{
+    border-collapse: collapse;
+}
+
+
+td,
+.wh-table td{
+    padding: .6rem 1.2rem;
+    text-align: center;
+    border-bottom: solid 6px rgba(24, 24, 208, 0.6);
+    
+}
+
+.stats{
+    color: green;
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+
+.statsf{
+    color: red;
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+
+
+tr:nth-child(odd){
+    background-color: aliceblue;
+}
+
+tr:nth-child(even){
+    background-color: beige;
+}
+td{
+    font-size: 1.4rem;
+   
+}
